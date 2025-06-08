@@ -3,183 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2025 - Festejando a Conexão Campo-Cidade</title>
+    <title>Conexão Campo-Cidade: O Futuro da Agricultura</title>
     <style>
+        :root {
+            --verde-escuro: #1b5e20;
+            --verde-claro: #81c784;
+            --bege: #f5f5dc;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: var(--bege);
             color: #333;
+            line-height: 1.6;
         }
         
         header {
-            background: linear-gradient(135deg, #2e7d32, #81c784);
+            background: linear-gradient(135deg, var(--verde-escuro), var(--verde-claro));
             color: white;
             text-align: center;
-            padding: 2rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
         }
         
-        .logo {
-            max-width: 150px;
-            margin-bottom: 1rem;
+        .header-content {
+            position: relative;
+            z-index: 2;
         }
         
         h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 2rem;
         }
         
-        .hero {
-            background: url('https://images.unsplash.com/photo-1586771107445-d3ca888129ce') center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
+        .section {
+            margin: 4rem 0;
         }
         
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            padding: 2rem;
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
         
         .card {
             background: white;
             border-radius: 8px;
             padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
         
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .card:hover {
+            transform: translateY(-5px);
         }
         
-        .feature {
-            text-align: center;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .card h3 {
+            color: var(--verde-escuro);
+            margin-top: 0;
         }
         
-        .feature img {
-            max-width: 100px;
+        .icon {
+            font-size: 3rem;
+            color: var(--verde-claro);
             margin-bottom: 1rem;
         }
         
+        .testimonials {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+        
         footer {
-            background: #2e7d32;
+            background-color: var(--verde-escuro);
             color: white;
             text-align: center;
             padding: 2rem 0;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
         
         .btn {
             display: inline-block;
-            background: #81c784;
+            background: var(--verde-escuro);
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
+            margin-top: 1rem;
         }
         
         .btn:hover {
-            background: #66bb6a;
-            transform: translateY(-2px);
+            background: var(--verde-claro);
+            color: #333;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <img src="https://via.placeholder.com/150x80?text=Agrinho+Logo" alt="Agrinho Logo" class="logo">
-        <h1>Agrinho 2025</h1>
-        <p>Festejando a Conexão Campo-Cidade</p>
+        <div class="header-content">
+            <h1>Conexão Campo-Cidade</h1>
+            <p class="tagline">Descubra como a integração entre o rural e o urbano está transformando nossa sociedade e criando um futuro mais sustentável</p>
+        </div>
     </header>
     
-    <div class="hero">
-        <div class="hero-content">
-            <h2>Unindo Tradição e Inovação</h2>
-            <p>Descubra como a integração entre campo e cidade está transformando nosso futuro</p>
-            <a href="#sobre" class="btn">Saiba Mais</a>
-        </div>
-    </div>
-    
     <div class="container">
-        <section id="sobre" class="card">
-            <h2>Sobre o Tema</h2>
-            <p>O Agrinho 2025 celebra a conexão entre campo e cidade, destacando como essa relação é fundamental para o desenvolvimento sustentável do nosso país. A tecnologia, a cultura e a economia unem esses dois universos, criando oportunidades e soluções inovadoras.</p>
-            <p>Neste ano, exploraremos como a agricultura moderna dialoga com o ambiente urbano, promovendo qualidade de vida, segurança alimentar e preservação ambiental.</p>
+        <section class="section">
+            <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce" alt="Campo e cidade integrados" class="main-image">
+            
+            <h2>O Diálogo Essencial</h2>
+            <p>A relação entre campo e cidade nunca foi tão importante quanto nos dias atuais. Enquanto as áreas urbanas concentram a maior parte da população, é no campo que se produz os alimentos que chegam às nossas mesas e as matérias-primas que movem nossa economia.</p>
+            
+            <p>Este site explora as inovações, desafios e oportunidades dessa conexão vital, mostrando como tecnologia, sustentabilidade e cooperação estão criando pontes entre esses dois mundos.</p>
+            
+            <a href="#tecnologia" class="btn">Explore as Inovações</a>
         </section>
         
-        <section class="card">
-            <h2>Pilares da Conexão Campo-Cidade</h2>
-            <div class="grid">
-                <div class="feature">
-                    <img src="https://via.placeholder.com/100x100?text=Tecnologia" alt="Tecnologia">
-                    <h3>Tecnologia no Campo</h3>
-                    <p>Drones, IoT e agricultura de precisão aproximam o produtor rural do consumidor urbano.</p>
+        <section id="tecnologia" class="section">
+            <h2>Tecnologias que Conectam</h2>
+            <p>Conheça as ferramentas que estão revolucionando a interação entre campo e cidade:</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3>Agricultura de Precisão</h3>
+                    <p>Sensores, drones e GPS aumentam a produtividade no campo enquanto reduzem o impacto ambiental.</p>
                 </div>
                 
-                <div class="feature">
-                    <img src="https://via.placeholder.com/100x100?text=Alimentos" alt="Alimentos">
-                    <h3>Alimentação Saudável</h3>
-                    <p>Cadeias curtas de produção garantem alimentos frescos nas cidades.</p>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Plataformas Digitais</h3>
+                    <p>Aplicativos conectam produtores diretamente aos consumidores urbanos, encurtando cadeias de distribuição.</p>
                 </div>
                 
-                <div class="feature">
-                    <img src="https://via.placeholder.com/100x100?text=Sustentabilidade" alt="Sustentabilidade">
-                    <h3>Sustentabilidade</h3>
-                    <p>Práticas agrícolas responsáveis preservam o meio ambiente para as futuras gerações.</p>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>Mecanização Inteligente</h3>
+                    <p>Tratores autônomos e sistemas automatizados tornam a produção mais eficiente.</p>
                 </div>
             </div>
         </section>
         
-        <section class="card">
-            <h2>Como Participar</h2>
-            <p>O programa Agrinho 2025 oferece diversas formas de engajamento para estudantes, professores e comunidades:</p>
-            <ul>
-                <li>Concurso cultural com premiações</li>
-                <li>Materiais didáticos sobre a conexão campo-cidade</li>
-                <li>Eventos e workshops presenciais</li>
-                <li>Projetos interdisciplinares para escolas</li>
-            </ul>
-            <a href="#" class="btn">Inscreva-se</a>
+        <section class="section">
+            <h2>Benefícios para Todos</h2>
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>Para o Produtor Rural</h3>
+                    <ul>
+                        <li>Acesso a mercados urbanos</li>
+                        <li>Melhores preços por venda direta</li>
+                        <li>Tecnologias para aumentar produtividade</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Para o Consumidor Urbano</h3>
+                    <ul>
+                        <li>Alimentos mais frescos e saudáveis</li>
+                        <li>Rastreabilidade da produção</li>
+                        <li>Conexão com a origem dos produtos</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Para o Meio Ambiente</h3>
+                    <ul>
+                        <li>Redução de desperdícios</li>
+                        <li>Menos transporte de longa distância</li>
+                        <li>Práticas agrícolas sustentáveis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2>Histórias Inspiradoras</h2>
+            <p>"Através de uma plataforma digital, conseguimos vender nossa produção orgânica diretamente para famílias na capital, aumentando nossa renda em 40% enquanto oferecemos alimentos mais frescos."</p>
+            <p><strong>- Maria Silva, Agricultora Familiar</strong></p>
         </section>
     </div>
     
     <footer>
-        <p>Agrinho 2025 - Festejando a Conexão Campo-Cidade</p>
-        <p>Um programa para construir pontes entre o rural e o urbano</p>
-        <p>© 2025 Todos os direitos reservados</p>
+        <p>© 2023 Conexão Campo-Cidade | Todos os direitos reservados</p>
+        <p>Contato: contato@conexaocampocidade.com.br</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-youtube"></i></a>
+        </div>
     </footer>
 </body>
 </html>
